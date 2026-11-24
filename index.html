@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>College Placement System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<section id="login" class="login">
+  <div class="login-card">
+    <h1>College Placement System</h1>
+    <p class="sub">Sign in to apply for jobs, hire students, or manage placements.</p>
+    <label>Role
+      <select id="role"><option value="student">Student</option><option value="company">Company</option><option value="admin">Placement officer (TPO)</option></select>
+    </label>
+    <label>Email <input id="email" type="email" value="demo@college.edu"></label>
+    <label>Password <input id="pass" type="password" value="demo123"></label>
+    <button class="btn" onclick="login()">Sign in</button>
+    <p class="hint">Demo mode: any email and password works.</p>
+  </div>
+</section>
+
+<div id="app" hidden>
+  <header class="top">
+    <strong id="title">Placement System</strong>
+    <span id="who"></span>
+    <button class="btn ghost" onclick="logout()">Sign out</button>
+  </header>
+  <main id="view"></main>
+</div>
+<div id="toast" class="toast" hidden></div>
+<script src="app.js"></script>
+</body>
+</html>
